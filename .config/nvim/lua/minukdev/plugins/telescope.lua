@@ -50,7 +50,9 @@ return {
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		keymap.set("n", "<F4>", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-		keymap.set("n", "<leader><leader>", "<cmd>Telescope keymaps<cr>", { desc = "Find todos" })
-		keymap.set("v", "<leader><leader>", "<cmd>Telescope keymaps<cr>", { desc = "Find todos" })
+		keymap.set({ "n", "v" }, "<leader><leader>", "<cmd>Telescope keymaps<cr>", { desc = "Find todos" })
+		keymap.set("n", "gc", "<cmd>Telescope lsp_incoming_calls<cr>", { desc = "Go to Callers" })
+		keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "Go to Referrers" })
+		keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "Go to Implements" })
 	end,
 }
