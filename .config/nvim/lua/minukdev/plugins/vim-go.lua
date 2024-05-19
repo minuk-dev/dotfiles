@@ -15,5 +15,6 @@ return {
 		keymap.set("n", "<leader>gotestfunc", "<cmd>GoTestFunc<cr>", { desc = "Go - Show documentation" })
 		keymap.set("n", "<leader>gocoverage", "<cmd>GoCoverage<cr>", { desc = "Go - Show documentation" })
 		keymap.set("n", "<leader>gorename", "<cmd>GoRename<cr>", { desc = "Go - Rename" })
+		keymap.set("n", "<S-F6>", "<cmd>GoRename<CR>", { desc = "Go - Rename" })
 	end,
 }
