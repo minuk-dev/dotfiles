@@ -34,3 +34,7 @@ opt.clipboard:append("unnamedplus") -- use system clipboard
 -- slip windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- undo
+opt.undofile = true
+vim.opt.undodir = "~/.config/nvim/.undo//"

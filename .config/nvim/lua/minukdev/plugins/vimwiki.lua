@@ -1,14 +1,13 @@
 return {
 	"vimwiki/vimwiki",
 	config = function()
-		vim.g.vimwiki_list = {
-			{
-				path = "~/workspace/minuk-dev.github.io/_wiki",
-				ext = ".md",
-				diary_rel_path = ".",
-			},
+		local wiki = {
+			path = "~/workspace/minuk-dev.github.io/_wiki",
+			ext = ".md",
 		}
+		vim.g.vimwiki_list = { wiki }
 		vim.g.vimwiki_conceallevel = 0
+		vim.g.vimwiki_global_ext = 0
 		local keymap = vim.keymap
 
 		-- vimwiki keymaps
