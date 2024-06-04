@@ -37,4 +37,4 @@ opt.splitbelow = true
 
 -- undo
 opt.undofile = true
-vim.opt.undodir = "~/.config/nvim/.undo//"
+vim.opt.undodir = "/Users/lmu/.config/nvim/.undo/"

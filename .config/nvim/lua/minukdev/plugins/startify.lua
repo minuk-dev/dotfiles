@@ -37,6 +37,17 @@ return {
 			{ type = gitUntracked, header = { "   git untracked" } },
 			{ type = "commands", header = { "   Commands" } },
 		}
+		vim.g.startify_session_persistence = 1
+		vim.g.startify_session_before_save = { "silent! NvimTreeClose" }
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "StartifyBufferOpened",
+			command = "lua require('nvim-tree').change_dir(vim.fn.getcwd())",
+		})
+
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "StartifyBufferOpened",
+			command = "lua require('nvim-tree.api').tree.toggle({focus=false})",
+		})
 
 		local keymap = vim.keymap
 		keymap.set("n", "<leader>s", "<cmd>Startify<CR>", { desc = "Open startify" })
